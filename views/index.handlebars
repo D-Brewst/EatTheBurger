@@ -1,0 +1,34 @@
+<div>
+    <h2>Taste these burgers!</h2>
+
+    <ul>
+    {{#each burgers}}
+        {{#unless eaten}}
+        <p>{{ name }} {{> burger-block eaten=false}}</p>
+        {{/unless}}
+    {{/each}}
+    </ul>
+</div>
+
+<h2>You tasted these already. No seconds!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if eaten}}
+      <p>{{ name }} {{> burger-block eaten=true}}</p>
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add Another Burger to Taste</h2>
+<form id="form">
+  <div class="form-row align-items-center">
+    <div class="col-sm-3 my-1">
+      <label class="sr-only" for="inlineFormInputName">Name</label>
+      <input type="text" class="form-control" id="newBurg" placeholder="Jane Doe" name="name">
+    </div>
+    <div class="col-auto my-1">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</form>
