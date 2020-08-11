@@ -1,9 +1,16 @@
 body {
     background-image: url("./Burger.jpg");
     color: white;
+    padding: 10px;
 }
 
 h1{
     text-align: center;
 }
 
+.center{
+    width: 150px;
+    height:150px;
+    margin-left: auto;
+    margin-right: auto;
+}
